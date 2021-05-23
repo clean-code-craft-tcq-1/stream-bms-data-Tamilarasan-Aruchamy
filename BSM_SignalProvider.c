@@ -29,7 +29,7 @@ return 0;
 
 static float Read_TemperatureInDegC()
 {
-	float Temp_RandNum_Min=10.0;
+	float Temp_RandNum_Min=-30.0;
 	float Temp_RandNum_Max=50.0;
 	
 	return (float)((((float)rand()/RAND_MAX)*(Temp_RandNum_Max-Temp_RandNum_Min))+Temp_RandNum_Min);
@@ -37,8 +37,8 @@ static float Read_TemperatureInDegC()
 
 static float Read_SOC()
 {
-	float SOC_RandNum_Min=1.0;
-	float SOC_RandNum_Max=2.0;
+	float SOC_RandNum_Min=20.0;
+	float SOC_RandNum_Max=50.0;
 	
 	return (float)((((float)rand()/RAND_MAX)*(SOC_RandNum_Max-SOC_RandNum_Min))+SOC_RandNum_Min);
 }
@@ -46,7 +46,7 @@ static float Read_SOC()
 static OutputTarget sendToConsole(OutputSignalConfig OutputData)
 {
 
-	printf("{\"Temperature\":%f,\"SOC\":%f}\n",OutputData.Temperature,OutputData.SOC);
+	printf("{\"Temperature\":%0.2f,\"SOC\":%0.2f}\n",OutputData.Temperature,OutputData.SOC);
 	return TO_CONSOLE;
 }
 

@@ -7,6 +7,6 @@ extern int printf_Func_CallCount;
 
 extern int ResetTestInterface();
 extern int rand();
-int printf(char* ConsoleOutput,char* ConsoleOutputValue)
+int printf(char* ConsoleOutputValue, float Temperature, float SOC);
 
 

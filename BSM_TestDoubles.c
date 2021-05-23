@@ -1,6 +1,7 @@
 #include "SignalProvider.h"
 #include <stddef.h>
 #include <stdint.h>
+#include <stdio.h>
 
 #define RAND_MAX UINT32_MAX
 

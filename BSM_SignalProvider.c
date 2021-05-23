@@ -2,20 +2,14 @@
 #include <string.h>
 #include "SignalProvider.h"
 
-//#define UNIT_TEST
-
-//#ifdef UNIT_TEST
 #include "BMS_TestDoublesHeader.h"
-//#else
-//#include <stdlib.h>
-//#include <stdio.h>
-//#endif
 
 
 static float Read_TemperatureInDegC();
 static float Read_SOC();
 static OutputTarget sendToConsole(OutputSignalConfig OutputData);
 int BSM_SignalProvider(OutputTarget OutputTargetIndex);
+
 
 static const OutputTargetConfig BSM_OutputTarget[Max_OutputTarget]={[TO_CONSOLE]={&sendToConsole}};
 
@@ -55,9 +49,7 @@ static float Read_SOC()
 
 static OutputTarget sendToConsole(OutputSignalConfig OutputData)
 {
-	char* buff;
-	snprintf(buff,10,"{\"Temperature\":%0.2f,\"SOC\":%0.2f}\n",OutputData.Temperature,OutputData.SOC);
-	printf("%s\n", buf);
+	printf("{\"Temperature\":%0.2f,\"SOC\":%0.2f}\n",OutputData.Temperature,OutputData.SOC);
 	return TO_CONSOLE;
 }
 

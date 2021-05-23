@@ -2,6 +2,7 @@
 
 #include "test/catch.hpp"
 #include "SignalProvider.h"
+#undef RAND_MAX
 #include "BMS_TestDoublesHeader.h"
 #include<stddef.h>
 #include<string.h>

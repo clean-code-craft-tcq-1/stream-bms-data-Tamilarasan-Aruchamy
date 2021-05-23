@@ -1,5 +1,5 @@
 #include <stdint.h>
-#define RAND_MAX UINT32_MAX
+#include "test/catch.hpp"
 
 extern char* Test_ConsoleOutput;
 extern int printf_Func_CallCount;

@@ -1,8 +1,6 @@
 #include "SignalProvider.h"
 #include <stddef.h>
 
-#define UNIT_TEST
-
 char* Test_ConsoleOutput=NULL;
 int printf_Func_CallCount=0;
 

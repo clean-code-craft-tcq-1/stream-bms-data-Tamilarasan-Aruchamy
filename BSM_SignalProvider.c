@@ -2,6 +2,8 @@
 #include <string.h>
 #include "SignalProvider.h"
 
+#define UNIT_TEST
+
 #ifdef UNIT_TEST
 #include "BMS_TestDoublesHeader.h"
 #else

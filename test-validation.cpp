@@ -6,6 +6,8 @@
 #include<stddef.h>
 #include<string.h>
 
+#define UNIT_TEST
+
 extern int BSM_SignalProvider(OutputTarget OutputTargetIndex);
 
 TEST_CASE("Print in Console") {

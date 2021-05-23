@@ -2,6 +2,10 @@
 #include <stddef.h>
 #include <stdint.h>
 
+
+int rand();
+int printf(char* ConsoleOutput);
+
 char* Test_ConsoleOutput=NULL;
 int printf_Func_CallCount=0;
 
@@ -16,7 +20,7 @@ printf_Func_CallCount=0;
 return 0;
 }
 
-int Rand()
+int rand()
 {
 	static int Itr=0;
 	int RandomValue=0;

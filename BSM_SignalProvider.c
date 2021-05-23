@@ -12,6 +12,7 @@
 static float Read_TemperatureInDegC();
 static float Read_SOC();
 static OutputTarget sendToConsole(OutputSignalConfig OutputData);
+int BSM_SignalProvider(OutputTarget OutputTargetIndex);
 
 static const OutputTargetConfig BSM_OutputTarget[Max_OutputTarget]={[TO_CONSOLE]={&sendToConsole}};
 

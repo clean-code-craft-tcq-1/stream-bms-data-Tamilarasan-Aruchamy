@@ -5,7 +5,7 @@
 #define RAND_MAX UINT32_MAX
 
 int rand();
-int printf(char* ConsoleOutput);
+int printf(char* ConsoleOutput,char* ConsoleOutputValue)
 
 char* Test_ConsoleOutput=NULL;
 int printf_Func_CallCount=0;
@@ -39,10 +39,9 @@ int rand()
 	return RandomValue;
 }
 
-
-int printf(char* ConsoleOutput)
+int printf(char* ConsoleOutput,char* ConsoleOutputValue)
 {
-	Test_ConsoleOutput=ConsoleOutput;
+	Test_ConsoleOutput=ConsoleOutputValue;
 	printf_Func_CallCount++;
 	return 0;
 }

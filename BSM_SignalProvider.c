@@ -38,7 +38,8 @@ static float Read_TemperatureInDegC()
 	float Temp_RandNum_Min=-30.0;
 	float Temp_RandNum_Max=50.0;
 	
-	return (float)((((float)rand()/RAND_MAX)*(Temp_RandNum_Max-Temp_RandNum_Min))+Temp_RandNum_Min);
+		//return (float)((((float)rand()/RAND_MAX)*(Temp_RandNum_Max-Temp_RandNum_Min))+Temp_RandNum_Min);
+	return rand();
 }
 
 static float Read_SOC()

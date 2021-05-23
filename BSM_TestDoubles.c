@@ -42,7 +42,8 @@ int rand()
 
 int printf(char* ConsoleOutputValue, float Temperature, float SOC)
 {
-	Test_ConsoleOutput=ConsoleOutputValue;
+	
+	snprintf(Test_ConsoleOutput,1024,ConsoleOutputValue,Temperature,SOC);
 	printf_Func_CallCount++;
 	return 0;
 }

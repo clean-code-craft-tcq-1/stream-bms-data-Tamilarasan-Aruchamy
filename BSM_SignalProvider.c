@@ -1,7 +1,5 @@
-//#include "test/catch.hpp"
 #include <string.h>
 #include "SignalProvider.h"
-
 #include "BMS_TestDoublesHeader.h"
 
 
@@ -35,8 +33,7 @@ static float Read_TemperatureInDegC()
 	float Temp_RandNum_Min=-30.0;
 	float Temp_RandNum_Max=50.0;
 	
-		//return (float)((((float)rand()/RAND_MAX)*(Temp_RandNum_Max-Temp_RandNum_Min))+Temp_RandNum_Min);
-	return rand();
+	return (float)((((float)rand()/RAND_MAX)*(Temp_RandNum_Max-Temp_RandNum_Min))+Temp_RandNum_Min);
 }
 
 static float Read_SOC()

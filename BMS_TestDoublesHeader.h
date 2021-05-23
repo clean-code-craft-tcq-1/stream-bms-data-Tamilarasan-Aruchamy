@@ -1,4 +1,7 @@
 #include <stdint.h>
+
+#define UNIT_TEST
+
 extern char* Test_ConsoleOutput;
 extern int printf_Func_CallCount;
 

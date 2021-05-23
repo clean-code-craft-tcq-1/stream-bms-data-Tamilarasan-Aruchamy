@@ -1,15 +1,15 @@
-#include "test/catch.hpp"
+//#include "test/catch.hpp"
 #include <string.h>
 #include "SignalProvider.h"
 
-#define UNIT_TEST
+//#define UNIT_TEST
 
-#ifdef UNIT_TEST
+//#ifdef UNIT_TEST
 #include "BMS_TestDoublesHeader.h"
-#else
-#include <stdlib.h>
-#include <stdio.h>
-#endif
+//#else
+//#include <stdlib.h>
+//#include <stdio.h>
+//#endif
 
 
 static float Read_TemperatureInDegC();

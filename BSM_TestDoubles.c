@@ -20,7 +20,7 @@ int Rand()
 {
 	static int Itr=0;
 	int RandomValue=0;
-	for(;Itr<15;i++)
+	for(;Itr<15;Itr++)
 	{
 		if(!(Itr%2))
 		{

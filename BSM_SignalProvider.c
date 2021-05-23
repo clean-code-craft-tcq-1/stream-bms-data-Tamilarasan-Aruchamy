@@ -1,7 +1,12 @@
-#include <stdlib.h>
-#include <stdio.h>
 #include <string.h>
 #include "SignalProvider.h"
+
+#ifdef UNIT_TEST
+#include "BMS_TestDoublesHeader.h"
+#else
+#include <stdlib.h>
+#include <stdio.h>
+#endif
 
 
 static float Read_TemperatureInDegC();

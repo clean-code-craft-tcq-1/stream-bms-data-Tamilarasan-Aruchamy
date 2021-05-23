@@ -10,7 +10,7 @@ extern int BSM_SignalSender(OutputTarget OutputTargetIndex);
 
 TEST_CASE("Print in Console") {
 	
-  REQUIRE(OutputTarget(TO_CONSOLE)==0);
+  REQUIRE(BSM_SignalProvider(TO_CONSOLE)==0);
 
 
 

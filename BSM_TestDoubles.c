@@ -13,7 +13,8 @@ int ResetTestInterface()
 
 Test_ConsoleOutput=NULL;
 printf_Func_CallCount=0;
-	
+
+return 0;
 }
 
 int Rand()
@@ -39,6 +40,6 @@ int printf(char* ConsoleOutput)
 {
 	Test_ConsoleOutput=ConsoleOutput;
 	printf_Func_CallCount++;
-	return 1;
+	return 0;
 }
 

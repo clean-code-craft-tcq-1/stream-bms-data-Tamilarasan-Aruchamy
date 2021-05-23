@@ -6,7 +6,7 @@
 #include<stddef.h>
 #include<string.h>
 
-extern int BSM_SignalSender(OutputTarget OutputTargetIndex);
+extern int BSM_SignalProvider(OutputTarget OutputTargetIndex);
 
 TEST_CASE("Print in Console") {
 	

@@ -10,7 +10,7 @@ static OutputTarget sendToConsole(OutputSignalConfig OutputData);
 
 static const OutputTargetConfig BSM_OutputTarget[Max_OutputTarget]={[TO_CONSOLE]={&sendToConsole}};
 
-int main(OutputTarget OutputTargetIndex)
+int BSM_SignalProvider(OutputTarget OutputTargetIndex)
 {
 	OutputSignalConfig OutputData={32767,32767};
 	int num=0;

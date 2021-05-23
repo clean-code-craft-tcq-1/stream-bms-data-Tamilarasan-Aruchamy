@@ -4,7 +4,7 @@
 #include "SignalProvider.h"
 
 
-static float Read_Temperature();
+static float Read_TemperatureInDegC();
 static float Read_SOC();
 static OutputTarget sendToConsole(OutputSignalConfig OutputData);
 
@@ -16,7 +16,7 @@ int BSM_SignalProvider(OutputTarget OutputTargetIndex)
 
 	for(int i=0; i<15 ; i++)
 	{
-		OutputData.Temperature=Read_Temperature();
+		OutputData.Temperature=Read_TemperatureInDegC();
 		OutputData.SOC=Read_SOC();
 		
 		BSM_OutputTarget[OutputTargetIndex].sendTo(OutputData);
@@ -27,7 +27,7 @@ return 0;
 	
 }
 
-static float Read_Temperature()
+static float Read_TemperatureInDegC()
 {
 	float Temp_RandNum_Min=10.0;
 	float Temp_RandNum_Max=50.0;

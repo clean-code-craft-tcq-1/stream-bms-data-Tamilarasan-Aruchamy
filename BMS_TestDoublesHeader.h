@@ -3,7 +3,7 @@ extern int printf_Func_CallCount;
 
 
 extern int ResetTestInterface();
-extern int Rand();
+extern int rand();
 extern int printf(char* ConsoleContent);
 
 

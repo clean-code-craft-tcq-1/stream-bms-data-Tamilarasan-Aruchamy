@@ -2,6 +2,7 @@
 #include <stddef.h>
 #include <stdint.h>
 
+#define RAND_MAX UINT32_MAX
 
 int rand();
 int printf(char* ConsoleOutput);
@@ -32,7 +33,7 @@ int rand()
 		}
 		else
 		{
-			RandomValue=UINT32_MAX-Itr;
+			RandomValue=RAND_MAX-Itr;
 		}
 	}
 	return RandomValue;

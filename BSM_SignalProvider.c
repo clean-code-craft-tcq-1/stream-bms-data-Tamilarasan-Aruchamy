@@ -13,11 +13,8 @@ static const OutputTargetConfig BSM_OutputTarget[Max_OutputTarget]={[TO_CONSOLE]
 int BSM_SignalProvider(OutputTarget OutputTargetIndex)
 {
 	OutputSignalConfig OutputData={32767,32767};
-	int num=0;
-	scanf("%d",&num);
-	printf("%d\n",num);
-	for(int i=0; i<num ; i++)
-		while(1)
+
+	for(int i=0; i<15 ; i++)
 	{
 		OutputData.Temperature=Read_Temperature();
 		OutputData.SOC=Read_SOC();

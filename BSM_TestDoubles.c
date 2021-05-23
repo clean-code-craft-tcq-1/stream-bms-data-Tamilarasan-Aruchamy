@@ -29,7 +29,7 @@ int Rand()
 		}
 		else
 		{
-			RandomValue=RAND_MAX-Itr;
+			RandomValue=UINT32_MAX-Itr;
 		}
 	}
 	return RandomValue;

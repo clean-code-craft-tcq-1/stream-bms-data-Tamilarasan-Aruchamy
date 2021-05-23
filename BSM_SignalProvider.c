@@ -55,8 +55,9 @@ static float Read_SOC()
 
 static OutputTarget sendToConsole(OutputSignalConfig OutputData)
 {
-
-	printf("{\"Temperature\":%0.2f,\"SOC\":%0.2f}\n",OutputData.Temperature,OutputData.SOC);
+	char* buff;
+	snprintf(buff,10,"{\"Temperature\":%0.2f,\"SOC\":%0.2f}\n",OutputData.Temperature,OutputData.SOC);
+	printf("%s\n", buf);
 	return TO_CONSOLE;
 }
 

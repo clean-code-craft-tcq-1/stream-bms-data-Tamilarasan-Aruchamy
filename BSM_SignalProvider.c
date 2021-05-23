@@ -1,3 +1,4 @@
+#include "test/catch.hpp"
 #include <string.h>
 #include "SignalProvider.h"
 

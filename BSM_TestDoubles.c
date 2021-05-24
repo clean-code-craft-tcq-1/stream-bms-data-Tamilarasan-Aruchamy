@@ -9,9 +9,9 @@
 int rand();
 int printf(char* Format, float Temperature, float SOC);
 
-char* ConsoleOutputFormat[15]=NULL;
-float ConsoleOutputTemperature[15]=NULL;
-float ConsoleOutputSOC[15]=NULL;
+char* ConsoleOutputFormat[15]={NULL};
+float ConsoleOutputTemperature[15]={NULL};
+float ConsoleOutputSOC[15]={NULL};
 int printf_Func_CallCount=0;
 
 
@@ -19,9 +19,9 @@ int printf_Func_CallCount=0;
 int ResetTestInterface()
 {
 
-ConsoleOutputFormat[15]=NULL;
-ConsoleOutputTemperature[15]=NULL;
-ConsoleOutputSOC[15]=NULL;
+ConsoleOutputFormat[15]={NULL};
+ConsoleOutputTemperature[15]={NULL};
+ConsoleOutputSOC[15]={NULL};
 printf_Func_CallCount=0;
 
 return 0;

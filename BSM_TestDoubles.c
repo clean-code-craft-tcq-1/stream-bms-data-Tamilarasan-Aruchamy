@@ -36,7 +36,7 @@ int rand()
 	
 
 	
-	int RandomValue=0;
+	int RandomValue=RAND_MAX-1;
 	for(;Itr<30;Itr++)
 	{
 		if(!(Itr%2))

@@ -9,9 +9,9 @@
 int rand();
 int printf(char* Format, float Temperature, float SOC);
 
-char* ConsoleOutputFormat[15]={NULL};
-float ConsoleOutputTemperature[15]={NULL};
-float ConsoleOutputSOC[15]={NULL};
+char* ConsoleOutputFormat[15];
+float ConsoleOutputTemperature[15];
+float ConsoleOutputSOC[15];
 int printf_Func_CallCount=0;
 
 

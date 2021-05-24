@@ -41,11 +41,11 @@ int rand()
 	{
 		if(!(Itr%2))
 		{
-			RandomValue=Rand_Temperature[Itr/2];
+			RandomValue=Rand_Temperature[14];
 		}
 		else
 		{
-			RandomValue=Rand_SOC[Itr/2];
+			RandomValue=Rand_SOC[14];
 		}
 	}
 	return RandomValue;

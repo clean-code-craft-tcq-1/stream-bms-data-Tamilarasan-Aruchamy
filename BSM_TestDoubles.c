@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-//#define RAND_MAX UINT32_MAX
+#define RAND_MAX UINT32_MAX
 
 int rand();
 int printf(char* Format, float Temperature, float SOC);

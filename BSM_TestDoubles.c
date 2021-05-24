@@ -6,9 +6,11 @@
 #define RAND_MAX UINT32_MAX
 
 int rand();
-int printf(char* ConsoleOutputValue, float Temperature, float SOC);
+int printf(char* Format, float Temperature, float SOC);
 
-char* Test_ConsoleOutput=NULL;
+char* ConsoleOutputFormat=NULL;
+float ConsoleOutputTemperature=NULL;
+float ConsoleOutputSOC=NULL;
 int printf_Func_CallCount=0;
 
 
@@ -40,10 +42,12 @@ int rand()
 	return RandomValue;
 }
 
-int printf(char* ConsoleOutputValue, float Temperature, float SOC)
+int printf(char* Format, float Temperature, float SOC)
 {
-	
-	snprintf(Test_ConsoleOutput,1024,"%f%f",Temperature,SOC);
+	ConsoleOutputFormat=Format;
+	ConsoleOutputTemperature=Temperature;
+	ConsoleOutputSOC=SOC;
+
 	printf_Func_CallCount++;
 	return 0;
 }

@@ -1,12 +1,14 @@
 #include <stdint.h>
 #define RAND_MAX UINT32_MAX
 
-extern char* Test_ConsoleOutput;
+extern char* ConsoleOutputFormat=NULL;
+extern float ConsoleOutputTemperature=NULL;
+extern float ConsoleOutputSOC=NULL;
 extern int printf_Func_CallCount;
 
 
 extern int ResetTestInterface();
 extern int rand();
-int printf(char* ConsoleOutputValue, float Temperature, float SOC);
+extern int printf(char* Format, float Temperature, float SOC);
 
 

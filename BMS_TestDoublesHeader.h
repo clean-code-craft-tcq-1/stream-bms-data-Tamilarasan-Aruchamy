@@ -8,7 +8,7 @@ extern int printf_Func_CallCount;
 
 
 extern int ResetTestInterface();
-extern int rand();
+extern unsigned int rand();
 extern int printf(char* Format, float Temperature, float SOC);
 
 

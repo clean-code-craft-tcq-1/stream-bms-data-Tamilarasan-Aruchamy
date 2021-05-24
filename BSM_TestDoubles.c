@@ -4,9 +4,9 @@
 #include <stdio.h>
 //#include <stdlib.h>
 
-#define RAND_MAX UINT32_MAX
+#define RAND_MAX INT_MAX
 
-unsigned int rand();
+int rand();
 int printf(char* Format, float Temperature, float SOC);
 
 char* ConsoleOutputFormat=NULL;
@@ -27,16 +27,16 @@ printf_Func_CallCount=0;
 return 0;
 }
 
-unsigned int rand()
+int rand()
 { 
-	unsigned int Rand_Temperature[15]={0,1,2,3,4,5,6,7,RAND_MAX-7,RAND_MAX-6,RAND_MAX-5,RAND_MAX-4,RAND_MAX-3,RAND_MAX-2,RAND_MAX-1};
-	unsigned int Rand_SOC[15]={0,1,2,3,4,5,6,7,RAND_MAX-7,RAND_MAX-6,RAND_MAX-5,RAND_MAX-4,RAND_MAX-3,RAND_MAX-2,RAND_MAX-1};
+	int Rand_Temperature[15]={0,1,2,3,4,5,6,7,RAND_MAX-7,RAND_MAX-6,RAND_MAX-5,RAND_MAX-4,RAND_MAX-3,RAND_MAX-2,RAND_MAX-1};
+	int Rand_SOC[15]={0,1,2,3,4,5,6,7,RAND_MAX-7,RAND_MAX-6,RAND_MAX-5,RAND_MAX-4,RAND_MAX-3,RAND_MAX-2,RAND_MAX-1};
 		
 	static int Itr=0;
 	
 
 	
-	unsigned int RandomValue=0;
+	int RandomValue=0;
 	for(;Itr<30;Itr++)
 	{
 		if(!(Itr%2))

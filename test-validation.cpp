@@ -39,7 +39,7 @@ TEST_CASE("Print in Console") {
 	REQUIRE(ConsoleOutputTemperature[9]==(float)((((float)(RAND_MAX-6)/RAND_MAX)*(Temp_RandNum_Max-Temp_RandNum_Min))+Temp_RandNum_Min));
 	REQUIRE(ConsoleOutputTemperature[10]==(float)((((float)(RAND_MAX-5)/RAND_MAX)*(Temp_RandNum_Max-Temp_RandNum_Min))+Temp_RandNum_Min));
 	REQUIRE(ConsoleOutputTemperature[11]==(float)((((float)(RAND_MAX-4)/RAND_MAX)*(Temp_RandNum_Max-Temp_RandNum_Min))+Temp_RandNum_Min));
-	REQUIRE(ConsoleOutputTemperature[12]==(float)((((float)(RAND_MAX-3/RAND_MAX)*(Temp_RandNum_Max-Temp_RandNum_Min))+Temp_RandNum_Min));
+	REQUIRE(ConsoleOutputTemperature[12]==(float)((((float)(RAND_MAX-3)/RAND_MAX)*(Temp_RandNum_Max-Temp_RandNum_Min))+Temp_RandNum_Min));
 	REQUIRE(ConsoleOutputTemperature[13]==(float)((((float)(RAND_MAX-2)/RAND_MAX)*(Temp_RandNum_Max-Temp_RandNum_Min))+Temp_RandNum_Min));
 	REQUIRE(ConsoleOutputTemperature[14]==(float)((((float)(RAND_MAX-1)/RAND_MAX)*(Temp_RandNum_Max-Temp_RandNum_Min))+Temp_RandNum_Min));
  }

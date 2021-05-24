@@ -1,4 +1,5 @@
 #include <stdint.h>
+#include <limits.h>
 #define RAND_MAX INT_MAX
 
 extern char* ConsoleOutputFormat;

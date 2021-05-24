@@ -27,18 +27,24 @@ return 0;
 }
 
 int rand()
-{
+{ 
+	int Rand_Temperature[15]={0,1,2,3,4,5,6,7,RAND_MAX-7,RAND_MAX-6,RAND_MAX-5,RAND_MAX-4,RAND_MAX-3,RAND_MAX-2,RAND_MAX-1};
+	int Rand_SOC[15]={0,1,2,3,4,5,6,7,RAND_MAX-7,RAND_MAX-6,RAND_MAX-5,RAND_MAX-4,RAND_MAX-3,RAND_MAX-2,RAND_MAX-1};
+		
 	static int Itr=0;
+	
+
+	
 	int RandomValue=0;
-	for(;Itr<15;Itr++)
+	for(;Itr<30;Itr++)
 	{
 		if(!(Itr%2))
 		{
-			RandomValue=Itr;
+			RandomValue=Rand_Temperature[Itr/2];
 		}
 		else
 		{
-			RandomValue=RAND_MAX-Itr;
+			RandomValue=Rand_SOC[Itr/2];
 		}
 	}
 	return RandomValue;

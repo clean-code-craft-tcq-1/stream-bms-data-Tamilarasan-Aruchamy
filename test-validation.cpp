@@ -11,5 +11,6 @@ extern int BSM_SignalProvider(OutputTarget OutputTargetIndex);
 TEST_CASE("Print in Console") {
 	
   REQUIRE(BSM_SignalProvider(TO_CONSOLE)==0);
-  REQUIRE(strcmp(ConsoleOutputFormat,"{\"Temperature\":%0.2f,\"SOC\":%0.2f}\n")==0);
+  REQUIRE(strcmp(ConsoleOutputFormat,"{\"Temperature\":%0.2f,\"SOC\":%0.2f}\")==0);
+ 
 }

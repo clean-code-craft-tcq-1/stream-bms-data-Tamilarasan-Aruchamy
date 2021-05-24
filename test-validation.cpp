@@ -17,6 +17,6 @@ TEST_CASE("Print in Console") {
   REQUIRE(strcmp(ConsoleOutputFormat,"{\"Temperature\":%0.2f,\"SOC\":%0.2f}\n")==0);
 	
 
-  REQUIRE(ConsoleOutputTemperature==((((float)rand()/RAND_MAX)*(Temp_RandNum_Max-Temp_RandNum_Min))+Temp_RandNum_Min));
+  REQUIRE(ConsoleOutputTemperature==((((float)RAND_MAX-1/RAND_MAX)*(Temp_RandNum_Max-Temp_RandNum_Min))+Temp_RandNum_Min));
  
 }

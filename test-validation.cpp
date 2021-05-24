@@ -9,8 +9,14 @@
 extern int BSM_SignalProvider(OutputTarget OutputTargetIndex);
 
 TEST_CASE("Print in Console") {
+		float Temp_RandNum_Min=-30.0;
+	float Temp_RandNum_Max=50.0;
+	
 	
   REQUIRE(BSM_SignalProvider(TO_CONSOLE)==0);
   REQUIRE(strcmp(ConsoleOutputFormat,"{\"Temperature\":%0.2f,\"SOC\":%0.2f}\n")==0);
+	
+
+  REQUIRE(ConsoleOutputTemperature==((((float)rand()/RAND_MAX)*(Temp_RandNum_Max-Temp_RandNum_Min))+Temp_RandNum_Min));
  
 }

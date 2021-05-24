@@ -9,9 +9,9 @@
 int rand();
 int printf(char* Format, float Temperature, float SOC);
 
-char* ConsoleOutputFormat=NULL;
-float ConsoleOutputTemperature=NULL;
-float ConsoleOutputSOC=NULL;
+char* ConsoleOutputFormat[15]=NULL;
+float ConsoleOutputTemperature[15]=NULL;
+float ConsoleOutputSOC[15]=NULL;
 int printf_Func_CallCount=0;
 
 
@@ -19,9 +19,9 @@ int printf_Func_CallCount=0;
 int ResetTestInterface()
 {
 
-ConsoleOutputFormat=NULL;
-ConsoleOutputTemperature=NULL;
-ConsoleOutputSOC=NULL;
+ConsoleOutputFormat[15]=NULL;
+ConsoleOutputTemperature[15]=NULL;
+ConsoleOutputSOC[15]=NULL;
 printf_Func_CallCount=0;
 
 return 0;
@@ -38,12 +38,12 @@ int rand()
 	{
 		if(!(Itr%2))
 		{
-			RandomValue=Rand_Temperature[14];
+			RandomValue=Rand_Temperature[Itr/2];
 			Itr++;
 		}
 		else
 		{
-			RandomValue=Rand_SOC[14];
+			RandomValue=Rand_SOC[Itr/2];
 			Itr++;
 		}
 	}
@@ -51,12 +51,15 @@ int rand()
 }
 
 int printf(char* Format, float Temperature, float SOC)
-{
-	ConsoleOutputFormat=Format;
-	ConsoleOutputTemperature=Temperature;
-	ConsoleOutputSOC=SOC;
+{	
+	static int MsgIndex=0;
+	ConsoleOutputFormat[MsgIndex]=Format;
+	ConsoleOutputTemperature[MsgIndex]=Temperature;
+	ConsoleOutputSOC[MsgIndex]=SOC;
 
 	printf_Func_CallCount++;
+	
+	MsgIndex++;
 	return 0;
 }
 

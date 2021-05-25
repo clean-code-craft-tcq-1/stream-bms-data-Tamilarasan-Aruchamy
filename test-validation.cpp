@@ -26,9 +26,9 @@ TEST_CASE("Print in Console") {
 		
 	REQUIRE(strcmp(ConsoleOutputFormat[Itr],"{\"Temperature\":%0.2f,\"SOC\":%0.2f}\n")==0);
 
-	REQUIRE(ConsoleOutputTemperature[0]==(float)((((float)(Rand_Temperature[Itr])/RAND_MAX)*(Temp_RandNum_Max-Temp_RandNum_Min))+Temp_RandNum_Min));
+	REQUIRE(ConsoleOutputTemperature[Itr]==(float)((((float)(Rand_Temperature[Itr])/RAND_MAX)*(Temp_RandNum_Max-Temp_RandNum_Min))+Temp_RandNum_Min));
 		
-	REQUIRE(ConsoleOutputSOC[0]==(float)((((float)(Rand_SOC[Itr])/RAND_MAX)*(SOC_RandNum_Max-SOC_RandNum_Min))+SOC_RandNum_Min));
+	REQUIRE(ConsoleOutputSOC[Itr]==(float)((((float)(Rand_SOC[Itr])/RAND_MAX)*(SOC_RandNum_Max-SOC_RandNum_Min))+SOC_RandNum_Min));
 	
 	}
 	

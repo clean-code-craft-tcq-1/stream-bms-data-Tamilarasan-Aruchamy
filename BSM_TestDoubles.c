@@ -6,8 +6,6 @@
 
 #define RAND_MAX INT_MAX
 
-#define UNIT_TEST
-
 int rand();
 int printf(char* Format, float Temperature, float SOC);
 

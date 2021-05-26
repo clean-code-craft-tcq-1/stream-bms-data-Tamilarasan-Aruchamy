@@ -59,4 +59,4 @@ TEST_CASE("Test the output SOC")
 	{
 	REQUIRE(ConsoleOutputSOC[Itr]==(float)((((float)(Rand_SOC[Itr])/RAND_MAX)*(SOC_RandNum_Max-SOC_RandNum_Min))+SOC_RandNum_Min));
      	}
-}
+} 

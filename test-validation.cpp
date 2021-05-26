@@ -16,7 +16,7 @@ TEST_CASE("Test the Number printf function calls")
 	REQUIRE(printf_Func_CallCount==15);
 }
 
-TEST_CASE("Test the output Format and Temperature and SOC Values") 
+TEST_CASE("Test the output Temperature, SOC and Format of the sending data") 
 {
 	float Temp_RandNum_Min=-30.0;
 	float Temp_RandNum_Max=50.0;

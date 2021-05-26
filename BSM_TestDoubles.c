@@ -18,10 +18,6 @@ int printf_Func_CallCount=0;
 
 int ResetTestInterface()
 {
-
-ConsoleOutputFormat[15]={NULL};
-ConsoleOutputTemperature[15]={NULL};
-ConsoleOutputSOC[15]={NULL};
 printf_Func_CallCount=0;
 
 return 0;

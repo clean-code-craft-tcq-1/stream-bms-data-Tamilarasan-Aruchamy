@@ -8,6 +8,13 @@
 
 extern int BSM_SignalProvider(OutputTarget OutputTargetIndex);
 
+
+TEST_CASE("Print in Console call count") {
+
+REQUIRE(BSM_SignalProvider(TO_CONSOLE)==0);
+REQUIRE(printf_Func_CallCount==15);
+}
+
 TEST_CASE("Print in Console") {
 	
 	float Temp_RandNum_Min=-30.0;

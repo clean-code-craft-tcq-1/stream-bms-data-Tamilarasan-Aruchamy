@@ -32,4 +32,4 @@ jobs:
         retention-days: 1
         
     - name: build for production
-      run: g++ -Wall -Wextra -o testchecker main/main.c BSM_SignalProvider.c
+      run: g++ -Wall -Wextra -o testchecker main.c BSM_SignalProvider.c

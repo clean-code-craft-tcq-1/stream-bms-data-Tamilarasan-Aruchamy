@@ -34,19 +34,18 @@ int rand()
 	
 	static int Itr=0;
 	int RandomValue=0;
-	if(Itr<30)
+
+	if(!(Itr%2))
 	{
-		if(!(Itr%2))
-		{
-			RandomValue=Rand_Temperature[Itr/2];
-			Itr++;
-		}
-		else
-		{
-			RandomValue=Rand_SOC[Itr/2];
-			Itr++;
-		}
+		RandomValue=Rand_Temperature[Itr/2];
+		Itr++;
 	}
+	else
+	{
+		RandomValue=Rand_SOC[Itr/2];
+		Itr++;
+	}
+	
 	return RandomValue;
 }
 

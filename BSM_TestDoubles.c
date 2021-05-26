@@ -31,21 +31,19 @@ int rand()
 	static int Itr=0;
 	int RandomValue=0;
 	
-	if(Itr>30){
-		if(!(Itr%2))
-		{
-			RandomValue=Rand_Temperature[Itr/2];
-			Itr++;
-		}
-		else
-		{
-			RandomValue=Rand_SOC[Itr/2];
-			Itr++;
-		}
-	}
-		
-	else{
+	if(Itr>=30){
 		Itr=0;
+	}
+	
+	if(!(Itr%2))
+	{
+		RandomValue=Rand_Temperature[Itr/2];
+		Itr++;
+	}
+	else
+	{
+		RandomValue=Rand_SOC[Itr/2];
+		Itr++;
 	}
 	
 	return RandomValue;
@@ -56,7 +54,9 @@ int printf(char* Format, float Temperature, float SOC)
 	static int MsgIndex=0;
 	
 	
-	if(MsgIndex<15){
+	if(MsgIndex>=15){
+		MsgIndex=0;
+	}
 		ConsoleOutputFormat[MsgIndex]=Format;
 		ConsoleOutputTemperature[MsgIndex]=Temperature;
 		ConsoleOutputSOC[MsgIndex]=SOC;
@@ -64,10 +64,7 @@ int printf(char* Format, float Temperature, float SOC)
 		printf_Func_CallCount++;
 	
 		MsgIndex++;
-	}
-	else{
-		MsgIndex=0;
-	}
+
 	return 0;
 }
 

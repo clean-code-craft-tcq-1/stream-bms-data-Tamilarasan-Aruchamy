@@ -14,12 +14,10 @@ jobs:
       run: |
         sudo apt-get update
         sudo apt-get install -y gcovr
+        
     - name: build for test
       run: g++ -Wall -Wextra -fprofile-arcs -ftest-coverage -o testchecker BSM_SignalProvider.c BSM_TestDoubles.c
-      
-    - name: build for production
-      run: g++ -Wall -Wextra -o testchecker main.c BSM_SignalProvider.c
-      
+         
     - name: run
       run: ./testchecker
 
@@ -32,3 +30,6 @@ jobs:
         name: coverage
         path: ./*.html
         retention-days: 1
+        
+    - name: build for production
+      run: g++ -Wall -Wextra -o testchecker main.c BSM_SignalProvider.c

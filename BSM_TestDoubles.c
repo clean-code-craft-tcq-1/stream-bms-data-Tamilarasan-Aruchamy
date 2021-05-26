@@ -30,16 +30,22 @@ int rand()
 	
 	static int Itr=0;
 	int RandomValue=0;
-
-	if(!(Itr%2))
-	{
-		RandomValue=Rand_Temperature[Itr/2];
-		Itr++;
+	
+	if(Itr>30){
+		if(!(Itr%2))
+		{
+			RandomValue=Rand_Temperature[Itr/2];
+			Itr++;
+		}
+		else
+		{
+			RandomValue=Rand_SOC[Itr/2];
+			Itr++;
+		}
 	}
-	else
-	{
-		RandomValue=Rand_SOC[Itr/2];
-		Itr++;
+		
+	else{
+		Itr=0;
 	}
 	
 	return RandomValue;
@@ -48,13 +54,20 @@ int rand()
 int printf(char* Format, float Temperature, float SOC)
 {	
 	static int MsgIndex=0;
-	ConsoleOutputFormat[MsgIndex]=Format;
-	ConsoleOutputTemperature[MsgIndex]=Temperature;
-	ConsoleOutputSOC[MsgIndex]=SOC;
-
-	printf_Func_CallCount++;
 	
-	MsgIndex++;
+	
+	if(MsgIndex<15){
+		ConsoleOutputFormat[MsgIndex]=Format;
+		ConsoleOutputTemperature[MsgIndex]=Temperature;
+		ConsoleOutputSOC[MsgIndex]=SOC;
+
+		printf_Func_CallCount++;
+	
+		MsgIndex++;
+	}
+	else{
+		MsgIndex=0;
+	}
 	return 0;
 }
 

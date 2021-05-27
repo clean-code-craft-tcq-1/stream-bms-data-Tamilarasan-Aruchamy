@@ -43,6 +43,7 @@ return 0;
 }
 
 
+
 static float Read_TemperatureInDegC()
 {
 	float Temp_RandNum_Min=-30.0;
@@ -50,6 +51,9 @@ static float Read_TemperatureInDegC()
 	
 	//Read the Random value{0,RAND_MAX) from func rand() and limit to defined range.
 	return (float)((((float)rand()/RAND_MAX)*(Temp_RandNum_Max-Temp_RandNum_Min))+Temp_RandNum_Min);    
+}
+
+
 
 static float Read_SOC()
 {
@@ -59,6 +63,7 @@ static float Read_SOC()
 	//Read the Random value{0,RAND_MAX) from func rand() and limit to defined range.
 	return (float)((((float)rand()/RAND_MAX)*(SOC_RandNum_Max-SOC_RandNum_Min))+SOC_RandNum_Min);
 }
+
 
 
 static OutputTarget sendToConsole(OutputSignalConfig OutputData)

@@ -4,9 +4,9 @@
 #include <string.h>
 #include "SignalProvider.h"
 
-#ifdef UNIT_TEST
-	#include "BMS_TestDoublesHeader.h"
-#else
+#ifdef UNIT_TEST   	// include when building the Test code
+	#include "BMS_TestDoublesHeader.h"   
+#else			// include when building the Production code
 	#include <stdio.h>
 	#include <stdlib.h>
 #endif

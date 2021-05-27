@@ -16,7 +16,7 @@ jobs:
         sudo apt-get install -y gcovr
         
     - name: build for test
-      run: g++ -DUNIT_TEST -Wall -Wextra -fprofile-arcs -ftest-coverage -o testchecker *.cpp BSM_SignalProvider.c BSM_TestDoubles.c
+      run: g++ -DUNIT_TEST -Wall -Wextra -fprofile-arcs -ftest-coverage -o testchecker Sender/test-validation.cpp Sender/BSM_SignalProvider.c Sender/BSM_TestDoubles.c
          
     - name: test code run
       run: ./testchecker
@@ -32,7 +32,7 @@ jobs:
         retention-days: 1
         
     - name: build for production
-      run: g++ -Wall -Wextra -o Sender main.c BSM_SignalProvider.c
+      run: g++ -Wall -Wextra -o Sender Sender/main.c Sender/BSM_SignalProvider.c
       
     - name: production code run
       run: ./Sender

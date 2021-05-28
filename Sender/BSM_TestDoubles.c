@@ -1,8 +1,12 @@
+/******************************************************* Header_Files *******************************************************/ 
+
 #include "SignalProvider.h"
 #include <stddef.h>
 #include <stdint.h>
 #include <stdio.h>
 #include <limits.h>
+
+/******************************************* /MacroFunction/Variable Declarations *******************************************/ 
 
 #define RAND_MAX INT_MAX
 
@@ -15,13 +19,14 @@ float ConsoleOutputSOC[15];
 int printf_Func_CallCount=0;
 
 
+/*************************************************** function Definitions **************************************************/
 
 int ResetTestInterface()
 {
-printf_Func_CallCount=0;
-
-return 0;
+	printf_Func_CallCount=0;   // Resetting the Global variable
+	return 0;
 }
+
 
 int rand()
 { 
@@ -31,9 +36,11 @@ int rand()
 	static int Itr=0;
 	int RandomValue=0;
 	
-	if(Itr>=30){
-		Itr=0;
+	if(Itr>=30)
+	{
+		Itr=0;  // Resetting the static variable to avoid the array index over flow error
 	}
+	
 	
 	if(!(Itr%2))
 	{
@@ -49,21 +56,24 @@ int rand()
 	return RandomValue;
 }
 
+
 int printf(char* Format, float Temperature, float SOC)
 {	
 	static int MsgIndex=0;
 	
 	
-	if(MsgIndex>=15){
-		MsgIndex=0;
+	if(MsgIndex>=15)
+	{
+		MsgIndex=0;  // Resetting the static variable to avoid the array index over flow error
 	}
-		ConsoleOutputFormat[MsgIndex]=Format;
-		ConsoleOutputTemperature[MsgIndex]=Temperature;
-		ConsoleOutputSOC[MsgIndex]=SOC;
+		
+	ConsoleOutputFormat[MsgIndex]=Format;
+	ConsoleOutputTemperature[MsgIndex]=Temperature;
+	ConsoleOutputSOC[MsgIndex]=SOC;
 
-		printf_Func_CallCount++;
+	printf_Func_CallCount++;
 	
-		MsgIndex++;
+	MsgIndex++;
 
 	return 0;
 }

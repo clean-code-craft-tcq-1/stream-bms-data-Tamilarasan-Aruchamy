@@ -4,7 +4,7 @@
 //#include <sstream>
 using namespace std;
 
-void main()
+int main()
 {
 	std::string str;
 	string sender_data[10];
@@ -22,4 +22,5 @@ void main()
 		cout << sender_data[i];
 	}
 
+	return 0;
 }

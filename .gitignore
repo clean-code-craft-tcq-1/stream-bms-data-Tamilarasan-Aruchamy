@@ -59,3 +59,7 @@ sender_vs/Sender/Sender.vcxproj
 sender_vs/Sender/Sender.vcxproj.filters
 sender_vs/Sender/Sender.vcxproj.user
 Sender/BSM_SignalProvider.c
+Reciever/Reciever/.vs/Reciever/v16/ipch/AutoPCH/9e9ec96689adc9cf/JSONTEST.ipch
+Reciever/Reciever/Debug/jsonTest.obj
+Reciever/Reciever/Debug/log.txt
+Reciever/Reciever/jsonTest.cpp

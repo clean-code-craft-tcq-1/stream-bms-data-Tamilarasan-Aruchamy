@@ -3,6 +3,10 @@
 #include <string>
 //#include <sstream>
 using namespace std;
+#include <boost/property_tree/ptree.hpp>
+#include <boost/property_tree/json_parser.hpp>
+#include <boost/foreach.hpp>
+
 
 int main()
 {
@@ -24,3 +28,5 @@ int main()
 
 	return 0;
 }
+
+

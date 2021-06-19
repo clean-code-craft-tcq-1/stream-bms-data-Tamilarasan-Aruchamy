@@ -35,7 +35,7 @@ jobs:
       run: g++ -Wall -Wextra -o production ./Sender/main.c ./Sender/BSM_SignalProvider.c
 
     - name: build for production
-      run: g++ -Wall -Wextra -o Receiver ./BMS_Reciever/Receiver.cpp
+      run: g++ -Wall -Wextra -o Receiver ./BMS_Reciever/Receiver.cpp -lboost_system
         
     - name: production code run
       run: ./production | ./Receiver

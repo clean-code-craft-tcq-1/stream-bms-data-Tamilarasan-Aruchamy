@@ -30,12 +30,15 @@ jobs:
         name: coverage
         path: ./*.html
         retention-days: 1
-        
+     
+    - name: Install boost
+      run: sudo apt-get install libboost-thread-dev
+
     - name: build for production
       run: g++ -Wall -Wextra -o production ./Sender/main.c ./Sender/BSM_SignalProvider.c
 
     - name: build for production
-      run: g++ -Wall -Wextra -o Receiver ./BMS_Reciever/Receiver.cpp -lboost_system
+      run: g++ -Wall -Wextra -o Receiver ./BMS_Reciever/Receiver.cpp
         
     - name: production code run
       run: ./production | ./Receiver

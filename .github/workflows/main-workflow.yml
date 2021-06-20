@@ -41,10 +41,10 @@ jobs:
         retention-days: 1
      
     - name: build for sender
-      run: g++ -Wall -Wextra -o Sender ./Sender/main.c ./Sender/BSM_SignalProvider.c
+      run: g++ -Wall -Wextra -o sender_exe ./Sender/main.c ./Sender/BSM_SignalProvider.c
 
     - name: build for Receiver
       run: g++ -Wall -Wextra -o Receiver ./BMS_Reciever/BMS_operation_manager.cpp ./BMS_Reciever/BMS_Receiver.cpp ./BMS_Reciever/BMS_Receiver_main.cpp
         
     - name: production code run
-      run: ./Sender | ./Receiver
+      run: ./sender_exe | ./Receiver

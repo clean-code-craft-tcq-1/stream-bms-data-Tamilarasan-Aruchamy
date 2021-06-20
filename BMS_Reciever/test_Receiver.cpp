@@ -3,7 +3,7 @@
 #include "BMS_Receiver.h"
 #include <cmath>
 
-string dummy_data[6] = { "{\"Temperature\":-32,\"SOC\" : 36}",
+string dummy_data[6] = {"{\"Temperature\":-32,\"SOC\" : 36}",
 						"{\"Temperature\":-36,\"SOC\" : 66}", 
 						"{\"Temperature\":-28,\"SOC\" : 51}", 
 						"{\"Temperature\":-46,\"SOC\" : 26}", 
@@ -23,7 +23,7 @@ TEST_CASE("validate sender data")
 	
 	for (int i = 0;i < 6;i++)
 	{
-		receiver.parse_data(dummy_data[i], _parameter);
+		REQUIRE(receiver.parse_data(dummy_data[i], _parameter));
 
 		auto& list = receiver.get_parameter_list();
 		list.push_back(_parameter);		

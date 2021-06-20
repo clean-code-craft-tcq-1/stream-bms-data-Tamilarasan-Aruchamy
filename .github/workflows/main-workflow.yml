@@ -22,7 +22,7 @@ jobs:
       run: ./testchecker
 
     - name: build receiver test
-      run: g++ -Wall -Wextra -o Receiver_Test ./BMS_Reciever/test_Receiver.cpp
+      run: g++ -Wall -Wextra -o Receiver_Test ./BMS_Reciever/test_Receiver.cpp ./BMS_Reciever/BMS_operation_manager.cpp ./BMS_Reciever/BMS_Receiver.cpp
 
     - name: receiver test run
       run: ./Receiver_Test

@@ -16,7 +16,11 @@ void BMS_Receiver::get_sender_data(SENDER sender)
 		//out of scope
 		break;
 	}
+}
 
+vector<Parameters>& BMS_Receiver::get_parameter_list()
+{
+	return parameter_list;
 }
 
 void BMS_Receiver::get_data_from_console()
@@ -27,10 +31,29 @@ void BMS_Receiver::get_data_from_console()
 	{
 		Parameters parameter;
 		std::getline(std::cin, sender_data);
+		//sender_data = "{\"Temperature\":-29.90,\"SOC\":36.91}";
 
 		if (parse_data(sender_data, parameter))
+		{
 			parameter_list.push_back(parameter);
+			calculate_statistics();			
+		}
 	}	
+}
+
+void BMS_Receiver::print_statistics()
+{
+	operation.print_data();
+}
+
+void BMS_Receiver::calculate_statistics()
+{
+	operation.perform_operation(parameter_list);		
+}
+
+BMS_operation_manager BMS_Receiver::get_operation_instance()
+{
+	return operation;
 }
 
 bool BMS_Receiver::parse_data(string data, Parameters &parameter)
@@ -53,4 +76,5 @@ bool BMS_Receiver::parse_data(string data, Parameters &parameter)
 		return false;
 	}
 
+	return true;
 }

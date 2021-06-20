@@ -72,3 +72,11 @@ Reciever/Reciever/BMS_Receiver.h
 Reciever/Reciever/BMS_Receiver_main.cpp
 Reciever/Reciever/Debug/BMS_Receiver.obj
 Reciever/Reciever/Debug/BMS_Receiver_main.obj
+Reciever/Reciever/.vs/Reciever/v16/ipch/AutoPCH/6e51b3abfee82b19/TEST_RECEIVER.ipch
+Reciever/Reciever/.vs/Reciever/v16/ipch/AutoPCH/ea154b5627cd6bfd/BMS_OPERATION_MANAGER.ipch
+Reciever/Reciever/BMS_operation_manager.cpp
+Reciever/Reciever/BMS_operation_manager.h
+Reciever/Reciever/Debug/BMS_operation_manager.obj
+Reciever/Reciever/Debug/test_Receiver.obj
+Reciever/Reciever/defines.h
+Reciever/Reciever/test_Receiver.cpp

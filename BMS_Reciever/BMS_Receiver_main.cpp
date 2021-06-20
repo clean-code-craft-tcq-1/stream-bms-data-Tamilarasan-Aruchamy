@@ -4,8 +4,7 @@ using namespace std;
 
 int main()
 {
-	BMS_Receiver receiver;
-	
+	BMS_Receiver receiver;	
 	receiver.get_sender_data(CONSOLE);
 
 	return 0;

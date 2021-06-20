@@ -18,8 +18,14 @@ jobs:
     - name: build for test
       run: g++ -DUNIT_TEST -Wall -Wextra -fprofile-arcs -ftest-coverage -o testchecker ./Sender/test-validation.cpp ./Sender/BSM_SignalProvider.c ./Sender/BSM_TestDoubles.c
          
-    - name: test code run
+    - name: sender test run
       run: ./testchecker
+
+    - name: build receiver test
+      run: g++ -Wall -Wextra -o Receiver_Test ./BMS_Reciever/test_Receiver.cpp
+
+    - name: receiver test run
+      run: ./Receiver_Test
 
     - name: collect coverage
       run: gcovr --gcov-exclude=".*test.*" -r . --html --html-details -o coverage.html
@@ -38,7 +44,7 @@ jobs:
       run: g++ -Wall -Wextra -o production ./Sender/main.c ./Sender/BSM_SignalProvider.c
 
     - name: build for Receiver
-      run: g++ -Wall -Wextra -o Receiver ./BMS_Reciever/BMS_Receiver.cpp ./BMS_Reciever/BMS_Receiver_main.cpp
+      run: g++ -Wall -Wextra -o Receiver ./BMS_Reciever/BMS_operation_manager.cpp ./BMS_Reciever/BMS_Receiver.cpp ./BMS_Reciever/BMS_Receiver_main.cpp
         
     - name: production code run
       run: ./production | ./Receiver

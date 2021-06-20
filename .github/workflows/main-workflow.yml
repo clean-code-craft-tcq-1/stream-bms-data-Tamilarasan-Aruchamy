@@ -40,11 +40,11 @@ jobs:
         path: ./*.html
         retention-days: 1
      
-    - name: build for production
-      run: g++ -Wall -Wextra -o production ./Sender/main.c ./Sender/BSM_SignalProvider.c
+    - name: build for sender
+      run: g++ -Wall -Wextra -o Sender ./Sender/main.c ./Sender/BSM_SignalProvider.c
 
     - name: build for Receiver
       run: g++ -Wall -Wextra -o Receiver ./BMS_Reciever/BMS_operation_manager.cpp ./BMS_Reciever/BMS_Receiver.cpp ./BMS_Reciever/BMS_Receiver_main.cpp
         
     - name: production code run
-      run: ./production | ./Receiver
+      run: ./Sender | ./Receiver
